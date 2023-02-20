@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+
+
+
+\title{Math 3343: Homework 1 — LaTeX}
+\date{\today}
+\author{Tiffany Barragan\thanks{The University of Texas Rio Grande}}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+    
+The purpose of this homework is to work with the LaTeX typesetting software and produce a brief article with mathematical exposition.
+The raw text (without any LaTeX commands) is available as a .txt
+file and the images used are also available
+\end{abstract}
+
+\section{Requirements}
+\subsection{Deadline and Submissions}
+This \textbf{assignment is due by September 12 at 11:59pm.} In the
+end, you should submit
+
+\begin{itemize}
+   
+\item{Files entitled \textbf{hw.tex} and \textbf{hwbib.bib} to Blackboard along with}
+
+\item{\textbf{Honesty.txt} declaring your academic integrity on this assignment.}
+
+\end{itemize}
+
+\subsection{Specifications}
+This homework is kind of “meta.” Your job is to write the LaTeX to
+reproduce this exact pdf modulo two tiny tweaks:
+
+\begin{enumerate}
+
+\item{The author name should be your name.}
+
+\item{The date displayed should correspond to the date the file is compled into a pdf.}
+
+\end{enumerate}
+
+
+So just to be clear: you need to reproduce this pdf with all of
+its formatting, lists, math equations, numbering, clickable items (e.g.,
+\newline
+\newline
+Hopefully TeXing this up will be fun!
+\section{Some Mathy Stuff}
+\subsection{Cauchy-Schwarz}
+Here we present one of the most celebrated theorems in all of mathematics.
+
+\begin{theorem}{Cauchy-Schwarz}
+{Let $V$ be a vector space over a field $\mathbb(F)$. with inner product $\langle \cdot,\cdot\rangle : V^2$ $\rightarrow \mathbb{F}$. Then $\forall x,y \in{V}, \langle x,y \rangle^2 \le$ $\langle x,x\rangle \langle y,y\rangle$}.
+\end{theorem}
+
+\noindent Before the proof, lets consider an example. Suppose that we have two functions f,g : $\mathbb{R} \rightarrow \mathbb{R}$ and that \(\int_{1}^{\infty} x^2 f(x)^2\,dx=25\) and \(\int_{1}^{\infty}g(x)^2\,dx=9\). How big could Q=\(\int_{1}^{\infty} xf(x)g(x)\,dx\) possibly be --- or could it diverge?
+\newline
+\newline
+Well, the secret turns out that we can recognize integrals of functions as an inner product space (we won’t go into that verification here so as to make this assignment shorter). Define an inner product of functions
+
+\newpage
+
+
+a,b: $(1,\infty) \rightarrow \mathbb{R}$ via $\langle a,b\rangle$ $:= \int_{1}^{\infty}a(x)b(x)dx.$
+\newline
+\newline
+Q = $\int_{1}^{\infty} xf(x)g(x)dx$
+\newline
+\newline
+= $\iint_{1}^{\infty}$ (x(f(x))g(x)dx
+\newline
+\newline
+= $\langle xf(x),g(x) \rangle$
+\newline
+\newline
+$\le$ $((\int_{1}^{\infty}(xf(x))^{2}dx)^{1/2}$ $((\int_{1}^{\infty}(g(x))^{2}dx)^{1/2}$
+\newline 
+\newline
+= $((\int_{1}^{\infty}(xf(x))^{2}dx)^{1/2}$ $((\int_{1}^{\infty}(g(x))^{2}dx)^{1/2}$
+\newline
+\newline
+$\le 5\times 3 = 15$
+
+
+
+Thus, by Equation (1) we conclude that Q cannot exceed 15. We now provide a proof for real vector spaces.
+
+
+
+\begin{proof} \textit{proof of Theorem 1}. Let $x,y \in V$ with $y \neg 0$ be fixed and define $f : F \rightarrow F$ via $f( \alpha )  = \langle x - \alpha y, x - \alpha y \rangle $
+
+\end{proof}
+
+\begin{proof}
+
+$0 \le f(\alpha) = \langle x-\alpha y, x-\alpha y \rangle$
+
+\end{proof}
+
+\noindent 
+by inner product properties. We can also expand out $f\alpha$ and (after skipping a few steps):
+
+
+$f(\alpha)= \langle x,x \rangle + \alpha^2 \langle y,y \rangle -2\alpha \langle x,y \rangle$.
+
+
+
+
+\newpage
+
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=3.in]{Figure 1: Two vectors.png}
+    \caption{Two vectors in $\mathbb{R}^2$ }
+    \label{fig:vector}
+\end{figure}
+
+
+\subsection{Further Reading}
+This section is here just to practice with citations. In 1965, Callebaut published work on some generalizations to the Cauchy-Schwarz
+inequality \cite{callebaut1965generalization}. Yet more abstract generalization, such as those applied to operators on Hilbert spaces, have also been made \cite{bhatia1995cauchy}
+
+
+
+\bibliographystyle{plain}
+\bibliography{hwbib}
+
+
+
+
+
+
+\end{document}
